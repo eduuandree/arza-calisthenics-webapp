@@ -1,0 +1,36 @@
+# ARZA Calisthenics Project
+
+## Overview
+Personalized calisthenics routine generator with technical evaluation system.
+
+## Database Tables (Supabase)
+- users: personal info, objectives, availability (dias_por_sem, tiempo_sesion)
+- arza_evaluations: technical evaluation responses with raw scores
+- stats: normalized scores (0-99) using ARZA CARD formula
+- planillas: routine templates by days/duration
+- planilla_blocks: template structure
+- ejercicios: exercise database with levels
+- rutinas_generadas: generated routines
+- rutinas_generadas_detalle: routine details
+
+## Key Features
+1. Multi-step onboarding (personal info, objectives, availability)
+2. Conditional technical evaluation with scoring
+3. Automatic routine generation based on level
+4. ARZA Card visualization
+5. Email notifications
+6. Payment integration for full access
+
+## Tech Stack
+- Next.js 14 App Router
+- TypeScript
+- Tailwind CSS
+- Supabase
+- React Hook Form + Zod
+- Framer Motion
+
+## Business Logic
+- Raw scores determine user levels per block
+- Levels determine exercise selection
+- Templates selected by dias_por_sem + tiempo_sesion
+- Preview shows week 1, payment unlocks full routine
